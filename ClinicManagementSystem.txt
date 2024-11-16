@@ -1,0 +1,62 @@
+### DATA ###
+
+Patient{
+    String name;
+    Visit[] visits;
+}
+
+Medicine{
+    String name;
+    int stock;
+}
+
+Appointment{
+    String name;
+    LocalDateTime dateTime; MM-DD-YYYY, HH:mm
+    String purpose;
+    String contactNumber;
+}
+
+Visit{
+    String name;
+    LocalDateTime dateTime; MM-DD-YYYY, HH:mm
+    String purpose;
+    String diagnosis;
+    String[] prescriptions;
+    int[] medicineAmount;
+}
+
+patients = [name1,name2,name3,name4]
+facultyPatients = [name1,name4]
+studentPatients = [name2,name3]
+
+medicines = [
+    [medicine1,stock1],
+    [medicine2,stock2]
+]
+
+appointments[
+    [dateTime,name,purpose],
+    [dateTime,name,purpose]
+]
+
+visits = [
+    [ // patient 1
+        [dateTime,purpose,diagnosis,prescriptions,medicineAmount],
+        [dateTime,purpose,diagnosis,prescriptions,medicineAmount],
+        [dateTime,purpose,diagnosis,prescriptions,medicineAmount],
+        [dateTime,purpose,diagnosis,prescriptions,medicineAmount]
+    ],
+    [ // patient 2
+        [dateTime,purpose,diagnosis,prescriptions,medicineAmount],
+        [dateTime,purpose,diagnosis,prescriptions,medicineAmount],
+        [dateTime,purpose,diagnosis,prescriptions,medicineAmount],
+        [dateTime,purpose,diagnosis,prescriptions,medicineAmount]
+    ],  
+]
+
+
+QUESTIONS
+- Makagamit ba ug dynamic arrays
+- Asa dapat ma incorporate ang sorting and search
+- Is it okay na separate ang files
